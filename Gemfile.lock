@@ -53,8 +53,6 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    faraday (0.8.7)
-      multipart-post (~> 1.1)
     friendly_id (4.0.9)
     hike (1.2.2)
     i18n (0.6.1)
@@ -71,7 +69,6 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.3)
-    multipart-post (1.2.0)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.1)
@@ -118,7 +115,6 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    simple_oauth (0.2.0)
     slop (3.4.4)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -137,10 +133,6 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    twitter (4.6.2)
-      faraday (~> 0.8, < 0.10)
-      multi_json (~> 1.0)
-      simple_oauth (~> 0.2)
     tzinfo (0.3.37)
     uglifier (2.1.0)
       execjs (>= 0.3.0)
@@ -164,5 +156,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simple_form
   thin-rails
-  twitter
   uglifier (>= 1.0.3)
