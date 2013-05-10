@@ -25,4 +25,16 @@ class Birthday < ActiveRecord::Base
 
   validates_presence_of :date_born, :name, :url_hash
   validates_uniqueness_of :url_hash
+
+  def set_twitter_handle
+    twitter_account = self.twitter_url
+    if twitter_account.include?('twitter.com')
+      handle = twitter_account[/twitter\.com\/([a-zA-Z_]+)/,1]
+    elsif twitter_account.include?('@')
+      handle = twitter_account.sub('@', '')
+    else
+      handle = twitter_account
+    end
+    self.twitter_url = handle
+  end
 end

@@ -9,6 +9,7 @@ class BirthdaysController < ApplicationController
 
   def create
     @birthday = Birthday.new(params[:birthday])
+    @birthday.set_twitter_handle if params[:birthday][:twitter_url]
     @birthday.url_hash = SecureRandom.hex(10)
     if @birthday.save
       redirect_to @birthday
