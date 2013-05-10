@@ -1,0 +1,7 @@
+<%= simple_form_for @birthday do |f| %>
+  <%= f.input :date_born, discard_year: true, discard_hour: true, order: [:month, :day, :year] %>
+  <%= f.input :name  %>
+  <%= f.input :fb_url, placeholder: 'Facebook Url' %>
+  <%= f.input :twitter_url, placeholder: 'Twitter Url' %>
+  <%= f.button :submit %>
+<% end %>
