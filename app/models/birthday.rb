@@ -17,7 +17,6 @@ class Birthday < ActiveRecord::Base
   friendly_id :url_hash
 
   attr_accessible :date_born, 
-                  :fb_url, 
                   :name, 
                   :twitter_url, 
                   :url_hash

@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130510022043) do
+ActiveRecord::Schema.define(:version => 20130510035638) do
 
   create_table "birthdays", :force => true do |t|
     t.string   "url_hash"
-    t.string   "fb_url"
     t.string   "twitter_url"
     t.datetime "date_born"
     t.string   "name"
