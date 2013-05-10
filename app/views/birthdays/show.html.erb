@@ -3,5 +3,5 @@
 <h1><%= "Is it #{@birthday.name}'s birthday today?" %></h1>
 <h1><%= birthday_boolean %></h1>
 <%= congratulate %>
-<h2><%= link_to 'share this birthday link', @birthday_url %></h2>
+<h2>share this birthday link: <%= link_to birthday_url(@birthday), @birthday_url %></h2>
 <p><%= link_to 'make a birthday page for you or someone you know', new_birthday_path %></p>

@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def congratulate
-    if birthday_boolean == 'YES'
+    if @birthday.date_born == Date.today && @birthday.twitter_url.present?
       render partial: 'birthdays/tweet', locals: { handle: @birthday.twitter_url, url_site: birthday_url(@birthday) }
     end
   end
