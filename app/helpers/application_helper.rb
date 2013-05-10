@@ -12,4 +12,12 @@ module ApplicationHelper
       render partial: 'birthdays/tweet', locals: { handle: @birthday.twitter_url, url_site: birthday_url(@birthday) }
     end
   end
+
+  def show_lucky_one
+    if @lucky_one
+      link_to "It's #{@lucky_one.name}'s birthday today", birthday_path(@lucky_one)
+    else
+      "Seems like no one was born today."
+    end
+  end
 end
