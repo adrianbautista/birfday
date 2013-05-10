@@ -1,6 +1,19 @@
+<% title "Create A Birthday Page" %>
+
 <%= simple_form_for @birthday do |f| %>
-  <%= f.input :date_born, discard_year: true, discard_hour: true, order: [:month, :day, :year] %>
-  <%= f.input :name  %>
-  <%= f.input :twitter_url, placeholder: 'Twitter Url' %>
-  <%= f.button :submit %>
+  <div class="first">
+    <div class="one-third column">
+      <%= f.input :date_born, discard_year: true, discard_hour: true, order: [:month, :day, :year] %>  
+    </div>
+    <div class="one-third column">
+      <%= f.input :name  %>
+    </div>
+    <div class="one-third column">
+      <%= f.input :twitter_url, label: 'Twitter Username', placeholder: '@whosebirfday' %>
+    </div>
+  </div>
+
+  <div class="one-third column offset-by-one-third">
+    <%= f.button :submit, class: 'full-width' %>  
+  </div>
 <% end %>
