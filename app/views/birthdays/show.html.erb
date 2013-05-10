@@ -1,16 +1,15 @@
 <% title "IS IT #{@birthday.name}'S BIRTHDAY?" %>
 
-<div class="sixteen columns in-the-middle">
-  <h6><%= "Is it #{@birthday.name}'s birthday today?" %></h6>  
-</div>
-<div class="sixteen columns in-the-middle" id="verdict">
-  <h1><%= birthday_boolean %></h1>
-  <%= congratulate %>
-</div>
-<div class="sixteen columns in-the-middle">
-  <h6>share this birthday link: <%= link_to birthday_url(@birthday), @birthday_url %></h6>
+<div class="sixteen columns in-the-middle first">
+  <h6 class="row-space"><%= "Is it #{@birthday.name}'s birthday today?" %></h6>
+  <br class='clear'>
+  <h1 id="verdict"><%= birthday_boolean %></h1>
+  <br class='clear'>
+  <div class="tweet-button">
+    <%= congratulate %>
+  </div>
+  <br class='clear'>
+  <h6 class="row-space">share this birthday link: <%= link_to birthday_url(@birthday), @birthday_url %></h6>
   <%= link_to 'Make A New Birthday Page', new_birthday_path, class: 'button' %>
 </div>
-
-
 

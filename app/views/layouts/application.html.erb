@@ -17,7 +17,15 @@
 </head>
 <body>
   <div class="container">
-    <%= yield %>    
+    <%= yield %>
+
+    <footer class="sixteen columns in-the-middle">
+      <h6>
+        <%= link_to 'home', root_path %> | <%= link_to 'source code', "https://github.com/adrianbautista/birfday" %>
+        <br>
+        hacked one night by <a href="http://adrianbautista.com/">adrian</a>
+      </h6>
+    </footer>
   </div>
 </body>
 </html>

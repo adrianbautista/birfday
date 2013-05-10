@@ -6,15 +6,47 @@
   text-align: center;
 }
 
-#verdict {
-  h1 {
-    font: {
-      family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-      weight: 900;
-      size: 20rem;
-    }
-    display: block;
-    margin: 7rem 0;
-  }
+.row-space {
+  margin: 1rem 0;
+  display: block;
+}
 
+
+h1#verdict {
+  font: {
+    family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    weight: 900;
+  }
+  display: block;
+  margin: 7rem 0;
+  width: 100%;
+}
+
+select.datetime {
+  max-width: 100px;
+  display: inline-block;
+}
+
+.create-birthday {
+  margin: 2rem 0;
+}
+
+.tweet-button {
+  margin: 3rem 0;
+  @media screen and (max-width: 767px) {
+    margin: 0.5rem 0;
+  }
+}
+
+#name-error {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: red;
+}
+
+footer {
+  margin: 5rem 0;
+  h6 {
+    padding: 2rem 0;
+  }
 }
