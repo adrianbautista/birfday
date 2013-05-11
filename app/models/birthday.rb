@@ -37,4 +37,12 @@ class Birthday < ActiveRecord::Base
     end
     self.twitter_url = handle
   end
+
+  def twitter_message
+    if self.twitter_url.present?
+      "IS IT @#{self.twitter_url} #BIRFDAY?"
+    else
+      "IS IT #{self.name.upcase}'s #BIRFDAY?"
+    end
+  end
 end

@@ -13,6 +13,7 @@ class BirthdaysController < ApplicationController
     @birthday.set_twitter_handle if params[:birthday][:twitter_url]
     @birthday.url_hash = SecureRandom.hex(3)
     if @birthday.save
+      Twitter.update(@birthday.twitter_message + " #{birthday_url(@birthday)}")
       redirect_to @birthday
     else
       render :new
