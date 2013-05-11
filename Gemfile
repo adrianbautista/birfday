@@ -6,6 +6,7 @@ gem 'pg'
 gem 'friendly_id'
 gem 'simple_form'
 gem 'birthday'
+gem 'twitter'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
