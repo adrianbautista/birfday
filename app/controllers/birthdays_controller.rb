@@ -1,7 +1,7 @@
 class BirthdaysController < ApplicationController
 
   def index
-    @lucky_one = Birthday.select { |x| x.date_born_today? }.sample
+    @lucky_one = Birthday.date_born_today.sample
   end
 
   def new
