@@ -1,9 +1,14 @@
+<% content_for :page_specific_js do %>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.3.1/moment.min.js" type="text/javascript" ></script>
+<% end %>
+
+
 <% title "IS IT #{@birthday.name}'S BIRTHDAY?" %>
 
 <div class="sixteen columns in-the-middle first">
   <h6 class="row-space"><%= "is it #{@birthday.name}'s birthday today?" %></h6>
   <br class='clear'>
-  <h1 id="verdict"><%= birthday_boolean %></h1>
+  <h1 class="verdict" data-date="<%= birthday_presenter %>"></h1>
   <br class='clear'>
   <div class="tweet-button">
     <%= congratulate %>
